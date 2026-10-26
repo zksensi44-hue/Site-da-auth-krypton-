@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#060706" />
+    <meta name="description" content="Krypton Cloud — verificação segura da sua sessão." />
+    <title>Krypton Cloud — Verificação segura</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-left" aria-hidden="true"></div>
+      <div class="ambient ambient-right" aria-hidden="true"></div>
+
+      <header class="topbar" aria-label="Identidade da Krypton Cloud">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" role="img">
+              <path d="M11 8.5v23M11 20h11.3M22.3 20 30 11M22.3 20 30 29" />
+              <path class="mark-accent" d="M11 8.5h8.5M11 31.5h8.5" />
+            </svg>
+          </div>
+          <div class="brand-copy">
+            <strong>Krypton Cloud</strong>
+            <span>VERIFICAÇÃO SEGURA</span>
+          </div>
+        </div>
+        <div class="secure-badge" aria-label="Conexão criptografada">
+          <span class="secure-dot"></span>
+          <span>Criptografado</span>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="verification-card" aria-labelledby="card-title">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-content">
+            <div class="eyebrow-row">
+              <span class="eyebrow-line"></span>
+              <span class="eyebrow">PORTAL DE ACESSO</span>
+              <span class="eyebrow-line"></span>
+            </div>
+
+            <div class="status-visual" id="status-visual" aria-live="polite">
+              <div class="orbit orbit-one" aria-hidden="true"></div>
+              <div class="orbit orbit-two" aria-hidden="true"></div>
+              <div class="status-icon status-loading" id="status-icon" aria-hidden="true">
+                <span class="spinner"></span>
+                <svg class="success-check" viewBox="0 0 54 54">
+                  <path d="m15 27.5 8 8 16-17" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="status-copy">
+              <p class="status-kicker" id="status-kicker">ETAPA 01 / 03</p>
+              <h1 id="card-title">Estabelecendo conexão segura</h1>
+              <p class="status-description" id="status-description">Aguarde enquanto a Krypton Cloud protege sua sessão.</p>
+            </div>
+
+            <div class="stepper" aria-label="Progresso da verificação">
+              <div class="step-item is-active" data-step="1">
+                <div class="step-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="3.2" />
+                    <path d="M5.5 19c.7-3 2.8-4.6 6.5-4.6s5.8 1.6 6.5 4.6" />
+                  </svg>
+                </div>
+                <span>Usuário</span>
+              </div>
+              <div class="step-connector"><span></span></div>
+              <div class="step-item" data-step="2">
+                <div class="step-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3.5 19 6v5.6c0 4.2-2.7 7.5-7 9-4.3-1.5-7-4.8-7-9V6l7-2.5Z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <span>Segurança</span>
+              </div>
+              <div class="step-connector"><span></span></div>
+              <div class="step-item" data-step="3">
+                <div class="step-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8.5" />
+                    <path d="m8.5 12.2 2.2 2.2 4.8-5" />
+                  </svg>
+                </div>
+                <span>Acesso</span>
+              </div>
+            </div>
+
+            <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+
+            <button class="primary-button" id="return-button" type="button" hidden>
+              <span>Voltar para o servidor</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5" />
+              </svg>
+            </button>
+            <p class="button-note" id="button-note" hidden>Você pode fechar esta janela com segurança.</p>
+          </div>
+        </section>
+
+        <p class="session-meta">
+          <span class="meta-lock" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><rect x="3.2" y="7" width="9.6" height="6.5" rx="1.5" /><path d="M5.3 7V5.2a2.7 2.7 0 0 1 5.4 0V7" /></svg>
+          </span>
+          <span>Sessão protegida pela infraestrutura Krypton</span>
+        </p>
+      </main>
+
+      <footer class="footer">
+        <span class="footer-mark" aria-hidden="true"></span>
+        <span>Protegido por <strong>Krypton Systems</strong></span>
+        <span class="footer-separator" aria-hidden="true"></span>
+        <span>v2.4.0</span>
+      </footer>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
